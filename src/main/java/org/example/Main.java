@@ -10,7 +10,6 @@ public class Main {
         config.setConfig("max_connections", "100");
         config.setConfig("timeout", "30");
 
-        // Retrieve and print the configuration values
         System.out.println("Server URL: " + config.getConfig("server_url"));
         System.out.println("Max Connections: " + config.getConfig("max_connections"));
         System.out.println("Timeout: " + config.getConfig("timeout"));
