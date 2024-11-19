@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class GlobalConfigSingleton {
-    private static volatile GlobalConfigSingleton instance;
+    private static  GlobalConfigSingleton instance;
     private Map<String, String> configs;
 
     private GlobalConfigSingleton() {
@@ -13,11 +13,7 @@ public class GlobalConfigSingleton {
 
     public static GlobalConfigSingleton getInstance() {
         if (instance == null) {
-            synchronized (GlobalConfigSingleton.class) {
-                if (instance == null) {
-                    instance = new GlobalConfigSingleton();
-                }
-            }
+            instance = new GlobalConfigSingleton();
         }
         return instance;
     }
